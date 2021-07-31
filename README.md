@@ -25,8 +25,6 @@ git clone https://github.com/vanisbala/randomballmove
 ## Deployed Link
 - [See live Site](https://vanisbala.github.io/randomballmove/)
 
-## randomballmove demo
-![Pac-Man Demo](./media/RandomBallMove.gif)
 
 ## Author
 ### Vani 
