@@ -2,8 +2,10 @@
   It moves the given number of randomly colored balls within the targetted area.
 
 **What I Learned**
-- How to use setInterval() for continuous movement of Pac-Man
-- How to stop setInterval()
+- How to access CSS style properties in JS
+- Accessing values from HTML form elements
+- Create an array of objects and use it in functions
+- How to use setTimeout() in a recursive way for continuous ball movement
 
 ## Description
 - It creates the number of balls given.
@@ -24,7 +26,7 @@ git clone https://github.com/vanisbala/randomballmove
 - [See live Site](https://vanisbala.github.io/randomballmove/)
 
 ## randomballmove demo
-![Pac-Man Demo](./images/randomballmove.gif)
+![Pac-Man Demo](./media/RandomBallMove.gif)
 
 ## Author
 ### Vani 
@@ -32,5 +34,8 @@ git clone https://github.com/vanisbala/randomballmove
 
 ## Credits
 Thanks to MITxPRO for giving me the opportunity to work on this fun project.
+
+**Tutorials**
+- https://attacomsian.com/blog/javascript-get-css-styles
 
 

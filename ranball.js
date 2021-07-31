@@ -2,8 +2,7 @@
 
 // Global variables
 const area = document.getElementById('area'); //This is the area where the balls will be moved. Its properties are in CSS file
-const areaStyle = getComputedStyle(area); // This is used to get the CSS style property which otherwise can't be obtained from CSS file
-var ballCount = 10; // Give the required balls to run 
+const areaStyle = getComputedStyle(area); // This is used to get the CSS style property which otherwise can't be obtained from CSS filevar ballCount = 10; // Give the required balls to run 
 var ballArray = []; // This created the array which stores each ball properties as an object
 
 // It creates a ball the random color and position supplied.
@@ -60,13 +59,16 @@ function update(ball, x, y) {
 
 //creates and moves array of balls
 
-for (let i=0; i< ballCount; i++){
-    const ballColor = "#"+ (Math.floor(Math.random()*16777215).toString(16));
-    const x = Math.floor(Math.random()*550);
-    const y = Math.floor(Math.random()*350);
-    console.log(ballColor,x,y); //check
-    ballArray[i] = createball(ballColor,x,y);
-    update(ballArray[i],x,y)
+function start(){
+    ballCount = document.getElementById("ballcount").value; //get ball count from input form from HTML
+    for (let i=0; i< ballCount; i++){
+        const ballColor = "#"+ (Math.floor(Math.random()*16777215).toString(16));
+        const x = Math.floor(Math.random()*550);
+        const y = Math.floor(Math.random()*350);
+        console.log(ballColor,x,y); //check
+        ballArray[i] = createball(ballColor,x,y);
+        update(ballArray[i],x,y)
+    }
 }
 
 
