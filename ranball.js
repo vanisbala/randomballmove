@@ -4,6 +4,7 @@
 const area = document.getElementById('area'); //This is the area where the balls will be moved. Its properties are in CSS file
 const areaStyle = getComputedStyle(area); // This is used to get the CSS style property which otherwise can't be obtained from CSS filevar ballCount = 10; // Give the required balls to run 
 var ballArray = []; // This created the array which stores each ball properties as an object
+var timeoutId;
 
 // It creates a ball the random color and position supplied.
 function createball(color,left,top)
@@ -50,10 +51,11 @@ function moveTo(ball, x, y) {
 
 function update(ball, x, y) {
     moveTo(ball,x,y);
-    setTimeout(function () {
-      changeBallDirectionUponEdge(ball, x, y);
-      update(ball, x + ball.dx, y + ball.dy);
-    }, 1000/60);
+    timeoutId = setTimeout(function () {
+                changeBallDirectionUponEdge(ball, x, y);
+                update(ball, x + ball.dx, y + ball.dy);
+                }, 1000);
+    console.log("timeout:"+timeoutId);
 }
 
 
@@ -69,6 +71,12 @@ function start(){
         ballArray[i] = createball(ballColor,x,y);
         update(ballArray[i],x,y)
     }
+}
+
+
+function clear(){  
+        // clearTimeout(timeoutId);
+        location.reload();    
 }
 
 
