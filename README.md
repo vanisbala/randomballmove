@@ -9,7 +9,7 @@
 
 **ball-move**
 
-<img src="./media/ballmove.png" width="60" height="40">
+<img src="./media/ballmove.png" width="120" height="80">
 
 ## Description
 - It creates the number of balls given.
@@ -27,8 +27,8 @@ git clone https://github.com/vanisbala/randomballmove
 - All the balls start to move within the given window by detecting the edges in all directions.
 - You can clear the balls by pressing on Clear button.
 
-**Demo**
-![ball-move demo](./media/ballmove.gif)
+<!--**Demo**
+![ball-move demo](./media/ballmove.gif)-->
 
 ## Built with
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
