@@ -1,4 +1,4 @@
-#input{
+#input {
     position: relative;
     background-color: rgb(241, 241, 212);
     top: 10px;
@@ -8,12 +8,12 @@
     height: 75px;
     padding: 10px;
     text-align: center;
-    border: 2px solid #daa520;
+    border: 2px solid peru;;
     color: rgb(88, 6, 34);
     font-weight: bolder;
 }
-#button{
-    background-color: goldenrod;
+#button {
+    background-color: burlywood;;
     color: rgb(88, 6, 34);
     font-weight: normal;
     font-style: normal;
@@ -26,11 +26,16 @@
 
 #area {
     position: relative;
-    background-color: burlywood;
+    background-color: rgb(241, 241, 212);
     top: 10px;
     left: 10px;
     margin: 2em auto;
     width: 600px;
     height: 400px;
-    border: 2px solid #daa520;
+    border: 2px solid peru;
+}
+
+#button:hover {
+    background-color: peru;
+    color:whitesmoke;
 }

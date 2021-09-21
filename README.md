@@ -7,6 +7,10 @@
 - Create an array of objects and use it in functions
 - How to use setTimeout() in a recursive way for continuous ball movement
 
+**ball-move**
+
+<img src="./media/ballmove.png" width="60" height="40">
+
 ## Description
 - It creates the number of balls given.
 - Balls are created in random color in random positions.
@@ -15,7 +19,16 @@
 - It goes on forever.
 
 ## Installation
+- Download this project in your working directory through, \
 git clone https://github.com/vanisbala/randomballmove
+- Open randomballmove project in VScode, go to index.html, right click and select 'open in default browser'.
+- The project output will open in your browser.
+- Enter the number of balls you want to create and submit.
+- All the balls start to move within the given window by detecting the edges in all directions.
+- You can clear the balls by pressing on Clear button.
+
+**Demo**
+![ball-move demo](./media/ballmove.gif)
 
 ## Built with
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)

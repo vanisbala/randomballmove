@@ -21,16 +21,13 @@ function createball(color,left,top)
     ball.dx = 5; // distance to be moved per timeperiod in x axis
     ball.dy = 4; //distance to be moved per timeperiod in y axis
     return ball;
-
 }
 
 // When the ball has to change its direction . 
-
 function changeBallDirectionUponEdge(ball,x,y){
     var finalWidth = parseInt(areaStyle.width)-parseInt(ball.style.width) // ParseInt helps to trucnk the unneccessary strings and give the
     var finalHeight = parseInt(areaStyle.height)-parseInt(ball.style.height) //numerical part of the string passed
     // console.log(finalWidth,finalHeight);
-
     if (x < 0 || x > finalWidth) {
         ball.dx = -ball.dx;
         console.log(ball.dx);
@@ -48,19 +45,27 @@ function moveTo(ball, x, y) {
 }
 
 //To move ball after every 1000/60 ms
-
 function update(ball, x, y) {
     moveTo(ball,x,y);
-    timeoutId = setTimeout(function () {
+    timeoutId = window.setTimeout(function () {
                 changeBallDirectionUponEdge(ball, x, y);
                 update(ball, x + ball.dx, y + ball.dy);
-                }, 1000);
+                }, 1000/60);
     console.log("timeout:"+timeoutId);
 }
 
+// It clears all the timerID's that are created from the last to first by -- till it reaches 0 where the condition not met and it will comeout.
+// Finally it will reload the page.
+function clear(){  
+    console.log("Inside Clear")
+    while (timeoutId--) {
+        window.clearTimeout(timeoutId);
+        console.log("clearing "+ timeoutId)
+    }   
+    location.reload();    
+}
 
 //creates and moves array of balls
-
 function start(){
     ballCount = document.getElementById("ballcount").value; //get ball count from input form from HTML
     for (let i=0; i< ballCount; i++){
@@ -73,11 +78,11 @@ function start(){
     }
 }
 
+//Its another way to call a function on certain event happens on the DOM element and it always works.
+document.querySelector('.clearbtn').addEventListener('click',clear);
 
-function clear(){  
-        // clearTimeout(timeoutId);
-        location.reload();    
-}
+
+
 
 
 
